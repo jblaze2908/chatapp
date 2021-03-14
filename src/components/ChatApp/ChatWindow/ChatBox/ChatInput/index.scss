@@ -79,13 +79,13 @@
   }
 }
 aside.emoji-picker-react {
-  background: #232324;
-  border: none;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  background: #232324 !important;
+  border: none !important;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1) !important;
 }
 .emoji-picker-react .emoji-group:before {
-  background: transparent;
+  background: transparent !important;
 }
 .emoji-picker-react .emoji-categories {
-  filter: invert(1);
+  filter: invert(1) !important;
 }
