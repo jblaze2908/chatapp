@@ -1,0 +1,53 @@
+.callwindow {
+  &__container {
+    @media screen and(max-width:1100px) {
+      height: calc(100% - 2rem);
+      margin-left: 1rem;
+    }
+    max-width: 65rem;
+    height: calc(100% - 5rem);
+    margin-left: 2rem;
+    border-radius: 20px;
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    width: 5rem;
+    overflow: hidden;
+    background-color: #232324ea;
+    padding: 1rem 2rem;
+    @media screen and(max-width:800px) {
+      display: none;
+    }
+    &-open {
+      @media screen and(max-width:800px) {
+        animation: none;
+        width: 95%;
+        display: block;
+      }
+      animation: 1s ease-in-out forwards 1s open-call;
+    }
+    &-close {
+      @media screen and(max-width:800px) {
+        display: none;
+        animation: none;
+      }
+      animation: 1s ease-in-out forwards close-call;
+    }
+  }
+}
+
+@keyframes open-call {
+  from {
+    width: 5rem;
+  }
+  to {
+    width: calc(100% - 8rem);
+  }
+}
+@keyframes close-call {
+  from {
+    width: calc(100% - 8rem);
+  }
+  to {
+    width: 5rem;
+  }
+}

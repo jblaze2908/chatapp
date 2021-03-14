@@ -1,0 +1,90 @@
+@import "../../../Common/mixins.scss";
+.videocall {
+  &__container {
+    animation: 1.5s linear forwards fadeInAfter1s;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @media screen and(max-width:800px) {
+      animation: none;
+    }
+  }
+  &__header {
+    z-index: 1;
+    position: absolute;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    top: 8rem;
+    &-text {
+      font-size: 2.3rem;
+      color: #686868;
+      margin-bottom: 0.5rem;
+    }
+    &-callwith {
+      font-size: 2.9rem;
+      color: #dddada;
+    }
+  }
+  &__video {
+    &-container {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      & video {
+      }
+    }
+  }
+  &__smallvideo {
+    &-container {
+      position: absolute;
+      height: 10rem;
+      width: 10rem;
+      bottom: 3rem;
+      right: 1.5rem;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & video {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+        width: 100%;
+        border-radius: 14px;
+      }
+    }
+  }
+  &__btns {
+    position: absolute;
+    bottom: 4rem;
+    &-hidden {
+      animation: 0.5s fadeOut forwards;
+    }
+    &-visible {
+      animation: 0.5s fadeIn forwards;
+    }
+    &-endcall {
+      @include shine;
+      width: 4rem;
+      height: 4rem;
+      background-color: rgb(248, 76, 76);
+      background: linear-gradient(
+        90deg,
+        rgba(245, 88, 88, 1) 0%,
+        rgba(239, 69, 85, 1) 20%,
+        rgba(236, 59, 83, 1) 55%,
+        rgba(226, 27, 78, 1) 100%
+      );
+      border-radius: 50%;
+      border: none;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      &-animation {
+        animation: 0.5s ease-in-out forwards fadeOut;
+      }
+    }
+  }
+}

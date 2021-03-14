@@ -1,0 +1,15 @@
+.chatapp {
+  &__page {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff5757 25%, transparent 25%) -50px 0,
+      linear-gradient(225deg, #ff5757 25%, transparent 25%) -50px 0,
+      linear-gradient(315deg, #ff5757 25%, transparent 25%),
+      linear-gradient(45deg, #ff5757 25%, transparent 25%);
+    background-size: 2em 2em;
+    background-color: rgba(243, 115, 83, 0.918);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+}

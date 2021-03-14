@@ -1,0 +1,111 @@
+@import "../../../Common/mixins.scss";
+.audiocall {
+  &__container {
+    animation: 1.5s linear forwards fadeInAfter1s;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media screen and(max-width:800px) {
+      animation: none;
+    }
+  }
+  &__header {
+    text-align: center;
+    &-text {
+      font-size: 1.4rem;
+      color: #686868;
+      margin-bottom: 0.5rem;
+    }
+    &-callwith {
+      font-size: 2.1rem;
+      color: #dddada;
+    }
+  }
+  &__img {
+    &-supercontainer {
+      width: 25rem;
+      height: 25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    &-container {
+      width: 12rem;
+      position: relative;
+      height: 12rem;
+      border-radius: 50%;
+      transition: all 0.3s;
+      box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.25);
+      &::after {
+        @include rings(2s, 1s);
+      }
+      &::before {
+        @include rings(2s, 1.5s);
+      }
+      &-callend {
+        &::before,
+        &::after {
+          animation: none;
+        }
+      }
+      &-incall {
+        transform: translateY(-3rem);
+        width: 9rem;
+        height: 9rem;
+        &::before,
+        &::after {
+          animation: none;
+        }
+      }
+    }
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.3s;
+    &-incall {
+      width: 9rem;
+      height: 9rem;
+    }
+    & img {
+      background-color: #fff;
+      width: 100%;
+    }
+  }
+  &__btns {
+    &-endcall {
+      @include shine;
+      width: 4rem;
+      height: 4rem;
+      background-color: rgb(248, 76, 76);
+      background: linear-gradient(
+        90deg,
+        rgba(245, 88, 88, 1) 0%,
+        rgba(239, 69, 85, 1) 20%,
+        rgba(236, 59, 83, 1) 55%,
+        rgba(226, 27, 78, 1) 100%
+      );
+      border-radius: 50%;
+      border: none;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      &-animation {
+        animation: 0.5s ease-in-out forwards fadeOut;
+      }
+    }
+  }
+  &__calltimer {
+    color: #dddada;
+    &-container {
+      transition: all 0.5s;
+      font-size: 2.6rem;
+      &-callend {
+        font-size: 2.8rem;
+        transform: translateY(3rem);
+      }
+    }
+  }
+}

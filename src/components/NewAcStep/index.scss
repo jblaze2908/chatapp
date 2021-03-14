@@ -1,0 +1,100 @@
+.signupstep {
+  &__page {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff5757 25%, transparent 25%) -50px 0,
+      linear-gradient(225deg, #ff5757 25%, transparent 25%) -50px 0,
+      linear-gradient(315deg, #ff5757 25%, transparent 25%),
+      linear-gradient(45deg, #ff5757 25%, transparent 25%);
+    background-size: 2em 2em;
+    background-color: rgba(243, 115, 83, 0.918);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  &__container {
+    background-color: rgba(35, 35, 36, 0.835);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    padding: 4rem 2rem;
+    width: 30rem;
+  }
+  &__image {
+    cursor: pointer;
+    overflow: hidden;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.3);
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 300;
+    & img {
+      width: 100%;
+    }
+  }
+  &__form {
+    margin-top: 2rem;
+    width: 100%;
+    &-label {
+      font-weight: 300;
+      display: block;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    &-textfield {
+      &-container {
+        border: 1px solid #888;
+        box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.2);
+        display: flex;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+        align-items: center;
+      }
+      padding: 0.5rem;
+      color: #fff;
+      font-family: inherit;
+      font-size: 1.1rem;
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      font-weight: 300;
+      &-btn {
+        cursor: pointer;
+        margin-right: 0.5rem;
+        display: flex;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px rgb(35, 35, 36) inset !important;
+        -webkit-text-fill-color: #fff !important;
+        &:hover,
+        &:focus,
+        &:active {
+          -webkit-box-shadow: 0 0 0 30px rgb(35, 35, 36) inset !important;
+        }
+      }
+    }
+  }
+  &__btn {
+    display: block;
+    width: 100%;
+    background-color: #2c76ff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    height: 2.5rem;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+  }
+}
